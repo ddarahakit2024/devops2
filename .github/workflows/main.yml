@@ -43,7 +43,7 @@ jobs:
       - name: restart backend container
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host:
+          host: 175.197.41.193
           username: test
           key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCksiC3MLZfqdcuWW8eyDp4+Twg6OkyBZtCltbWcV+PE1jkaFZXA+bfZzif9GeAbb20qSoeFavMlC/mYbjJXemjCaGKV/rYzJhe6RyiIM6QMmbRTt6UH+Ctg+jjkldGurJerU+U6cspReMCNLlZQbnQ2Mi+8u/4grBcFXJIJ6C6rq2N+daZE5mlsW4W4z+orXQG4CA3VdZZxAPg58ZOulRvO1r8jOAySesmUnqePWjUQtJ75clNrxUypyp/a6JXGeXLcmVYPobkMoDLOZeCZ1j091OjasMBHcHO8mOxKt9TvsJyVGoazTzVATkdIaHZOXRVS5kQMv17GQtHxiIX56LYBo30ZETN6FS5p9tZWObeZqkCLtqY/qJqA0iwdICn17E/TnehDvNrJ7QT1vqXMvctbHNo/JKi9+frV8dvvJL6Fzbkp/ba2rd2XehrI3+GUk+RJ4Ypexy3W5X5n1q1z2w/vrIGbtCw3WRVpdqMkG81mCGrVnpWqmNFNaRVmf1s3ls= root@master
           port: 22
@@ -97,7 +97,7 @@ jobs:
       - name: restart backend container
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host:
+          host: 175.197.41.193
           username: test
           key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCksiC3MLZfqdcuWW8eyDp4+Twg6OkyBZtCltbWcV+PE1jkaFZXA+bfZzif9GeAbb20qSoeFavMlC/mYbjJXemjCaGKV/rYzJhe6RyiIM6QMmbRTt6UH+Ctg+jjkldGurJerU+U6cspReMCNLlZQbnQ2Mi+8u/4grBcFXJIJ6C6rq2N+daZE5mlsW4W4z+orXQG4CA3VdZZxAPg58ZOulRvO1r8jOAySesmUnqePWjUQtJ75clNrxUypyp/a6JXGeXLcmVYPobkMoDLOZeCZ1j091OjasMBHcHO8mOxKt9TvsJyVGoazTzVATkdIaHZOXRVS5kQMv17GQtHxiIX56LYBo30ZETN6FS5p9tZWObeZqkCLtqY/qJqA0iwdICn17E/TnehDvNrJ7QT1vqXMvctbHNo/JKi9+frV8dvvJL6Fzbkp/ba2rd2XehrI3+GUk+RJ4Ypexy3W5X5n1q1z2w/vrIGbtCw3WRVpdqMkG81mCGrVnpWqmNFNaRVmf1s3ls= root@master
           port: 22
