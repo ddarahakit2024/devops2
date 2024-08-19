@@ -37,7 +37,7 @@ jobs:
           password: Dkagh1234!
 
       - name: Push Frontend Docker image
-        uses: docker/cli-action@v2
+        uses: actions-hub/docker@master
         with:
           args: push ddarahakit2023/frontend:1.5
 
@@ -91,7 +91,7 @@ jobs:
           password: Dkagh1234!
 
       - name: Push Backend Docker image
-        uses: docker/cli-action@v2
+        uses: actions-hub/docker@master
         with:
           args: push ddarahakit2023/backend:1.5
 
