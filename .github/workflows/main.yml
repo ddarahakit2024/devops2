@@ -3,7 +3,7 @@ name: devops test
 on:
   push:
     branches: [ frontend, backend ]
-    
+
 jobs:
   frontend-deploy:
     if: github.ref == 'refs/heads/frontend'
@@ -41,6 +41,24 @@ jobs:
           push: true
           tags: ddarahakit2024/frontend:1.5
 
+      - name: restart backend container
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: 175.197.41.193
+          username: test
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
+          script: |
+            kubectl apply -f - <<EOF
+            apiVersion: v1
+            kind: Pod
+            metadata:
+              name: frontend
+            spec:
+              containers:
+                - name: frontend
+                  image: ddarahakit2024/frontend:1.5
+            EOF
   backend-deploy:
     if: github.ref == 'refs/heads/backend'
     name: Deploy to K8S backend
@@ -76,3 +94,22 @@ jobs:
         with:
           push: true
           tags: ddarahakit2024/backend:1.5
+
+      - name: restart backend container
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: 175.197.41.193
+          username: test
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
+          script: |
+            kubectl apply -f - <<EOF
+            apiVersion: v1
+            kind: Pod
+            metadata:
+              name: backend
+            spec:
+              containers:
+                - name: backend
+                  image: ddarahakit2024/backend:1.5
+            EOF
