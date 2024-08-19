@@ -40,7 +40,7 @@ jobs:
       - name: Push Frontend Docker image
         uses: actions-hub/docker@master
         with:
-          args: push ddarahakit2023/frontend:1.5
+          args: push ddarahakit2024/frontend:1.5
 
       - name: restart frontend container
         uses: appleboy/ssh-action@v1.0.3
@@ -94,7 +94,7 @@ jobs:
       - name: Push Backend Docker image
         uses: actions-hub/docker@master
         with:
-          args: push ddarahakit2023/backend:1.5
+          args: push ddarahakit2024/backend:1.5
 
       - name: restart backend container
         uses: appleboy/ssh-action@v1.0.3
